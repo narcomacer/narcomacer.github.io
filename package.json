@@ -1,0 +1,39 @@
+{
+    "name": "css_sandbox",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"test\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/narcomacer/css_sandbox.git"
+    },
+    "keywords": [
+        "css",
+        "sandbox"
+    ],
+    "author": "Narcomacer",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/narcomacer/css_sandbox/issues"
+    },
+    "homepage": "https://github.com/narcomacer/css_sandbox#readme",
+    "devDependencies": {
+        "browser-sync": "^2.26.7",
+        "clean-css": "^4.2.1",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^7.0.1",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-cli": "^2.2.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-less": "^4.0.1",
+        "gulp-sourcemaps": "^2.6.5",
+        "pixel-glass": "^1.0.13",
+        "vinyl-ftp": "^0.6.1"
+    },
+    "dependencies": {
+        "less": "^3.10.3"
+    }
+}

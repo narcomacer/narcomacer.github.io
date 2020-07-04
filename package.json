@@ -1,5 +1,5 @@
 {
-    "name": "css_sandbox",
+    "name": "narcomacer.github.io",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/narcomacer/css_sandbox.git"
+        "url": "git+https://github.com/narcomacer/narcomacer.github.io.git"
     },
     "keywords": [
         "css",
@@ -17,9 +17,9 @@
     "author": "Narcomacer",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/narcomacer/css_sandbox/issues"
+        "url": "https://github.com/narcomacer/narcomacer.github.io/issues"
     },
-    "homepage": "https://github.com/narcomacer/css_sandbox#readme",
+    "homepage": "https://github.com/narcomacer/narcomacer.github.io#readme",
     "devDependencies": {
         "browser-sync": "^2.26.7",
         "clean-css": "^4.2.1",
@@ -34,6 +34,8 @@
         "vinyl-ftp": "^0.6.1"
     },
     "dependencies": {
+        "bootstrap": "^4.5.0",
+        "jshint": "^2.11.1",
         "less": "^3.10.3"
     }
 }

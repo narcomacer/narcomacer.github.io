@@ -14,7 +14,7 @@ const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
 
-const pathName = 'avto';
+const pathName = '.';
 
 
 
@@ -22,23 +22,19 @@ const config = {
     path: {
         less: `${pathName}/src/less/*.less`,
         less2: `${pathName}/src/less/parts/*.less`,
-        html: `${pathName}/public/index.html`,
+        html: `${pathName}/index.html`,
 
     },
     output: {
-        cssName: `${pathName}.css`,
-        path: `${pathName}/public`,
-        path_file: `${pathName}/public/index.html`,
-        path_file_css: `${pathName}/public/${pathName}.css`,
+        cssName: `bundle${pathName}min.css`,
+        path: `${pathName}`,
+        path_file: `${pathName}/index.html`,
+        path_file_css: `${pathName}/${pathName}.css`,
         newHtml: `/tmp/fz3temp-2`
     }
-}
+};
 
-const config2 = {
-    path_1: `${pathName}/public/*.css`,
-    name_css: `style.css`,
-    output_path: `${pathName}/paintresident/wp-content/themes/paintresident`
-}
+
 
 
 gulp.task('less', function() {
@@ -61,7 +57,7 @@ gulp.task('push', function() {
 
 gulp.task('pushCss', function() {
     return gulp.src(config.output.path_file_css).pipe(gulp.dest(config.output.newHtml));
-})
+});
 
 gulp.task('serve', (done) => {
     browserSync.init({
@@ -85,10 +81,6 @@ const globs = [
 
 ];
 
-gulp.task('avto', function() {
-    return gulp.src(config2.path_1)
-        .pipe(concat(config2.name_css))
-        .pipe(gulp.dest(config2.output_path));
-});
 
-gulp.task('default', gulp.series('less', 'avto', 'serve'));
+
+gulp.task('default', gulp.series('less', 'serve'));

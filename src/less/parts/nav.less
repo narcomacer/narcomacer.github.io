@@ -1,0 +1,38 @@
+/* nav */
+.nav {
+  .size-full();
+  .flex-row;
+  .font-xs-600;
+  .padding-h(2em,2em);
+  align-content   : center;
+  align-items     : center;
+  justify-content : space-around;
+  position        : sticky;
+  top             : 0;
+  z-index         : 20;
+  background-color: @darkest;
+  @media (max-width: @size-mobile) {
+    .font-xxs-600;
+  }
+  
+
+  &__title {
+    text-transform: uppercase;
+    color         : @yellow;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color         : @white;
+
+    &:hover {
+      color: @yellow;
+    }
+  }
+
+  &__telephone {
+    color: @yellow;
+  }
+}
+
+/* nav  ends*/

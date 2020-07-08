@@ -1,0 +1,74 @@
+/* header */
+
+.header {
+  .size-full(40vw);
+  .grid(3rem 1fr);
+  background-color: @darkest;
+  color         : white;
+  padding-left:0;
+  padding-right: 0;
+  @media (max-width: @size-mobile) {
+    display: block;
+    }
+  
+
+  @media (max-width: 832px) {
+    height:auto;
+    width:100%;
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+  
+  &__aside{
+    
+    float:left;
+    writing-mode: tb-rl;
+    min-width:3rem;
+    text-align: center;
+    padding: 1em;
+    vertical-align: middle;
+    height:100%;
+    @media (max-width: @size-mobile) {
+    display: none;
+    }
+  }
+  
+  &__main {
+    
+    float:left;
+    height:100%;
+    justify-self: stretch;
+    .padding-h();
+    .bg-cover-color("img/header-l3.jpg", linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%));
+    
+    padding-left: ~"calc((100% - 500px)/5)";
+    padding-right: ~"calc(4*(100% - 500px)/5)";
+    
+    @media (max-width: @size-mobile) {
+    width:100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+  }
+  
+  &__title {
+    .title-h1;
+  }
+  
+  &__text{
+    margin-bottom: 40px;
+  
+  }
+  
+  .button{
+    .font-xxs-600;
+    height: 51px;
+    @media (max-width: @size-mobile) {
+    width:100%;
+    }
+  }
+
+  
+}
+
+/* header ends */

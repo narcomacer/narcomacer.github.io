@@ -19,7 +19,7 @@
 
     <nav class="nav">
 
-        <div class="nav__title"></div>
+
 
 
 
@@ -28,7 +28,7 @@
         <a href="" class="nav__link m-hide">Информация</a>
 
         <a href="" class="nav__link m-hide">Контакты</a>
-        <a href="tel:+"></a>
+
 
         <a href="tel:+79603975547" class="nav__link nav__telephone">+7(960)397-55-47</a>
 
@@ -90,7 +90,7 @@
     <section class="landings " id="landings">
         <h2 class="title">Примеры вёрстки</h2>
 
-        <div class="landings__slider">
+        <div class="landings__slider" id="slider1">
             <article class="landings__card" data-glide-el="track">
 
                 <a target="_blank" href="/center_lp/">
@@ -159,7 +159,7 @@
     <section class="landings " id="bitrix_pages">
         <h2 class="title">Примеры работ с 1С Bitrix</h2>
 
-        <div class="landings__slider">
+        <div class="landings__slider" id="slider2">
             <article class="landings__card">
 
                 <a target="_blank" href="https://xn----8sbdihbrep7azagdepew7k3b.xn--p1ai/">
@@ -255,9 +255,20 @@
         }
     </script>
 
-    <script>
+    <!-- <script>
         if (window.matchMedia("(max-width: 1000px)").matches) {
-            $('.landings__slider').slick({
+            $('#slider1').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: false,
+                dots: true,
+                fade: true,
+
+
+            });
+
+            $('#slider2').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
@@ -268,7 +279,7 @@
 
             });
         }
-    </script>
+    </script> -->
 
 
 

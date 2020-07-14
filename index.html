@@ -145,6 +145,25 @@
         }
     </script>
 
+    <script>
+        // Scroll page to id
+        const pageRoll = (e) => {
+            e.preventDefault();
+            const href = e.target.getAttribute('href');
+            console.log(href);
+            document.querySelector(href).scrollIntoView(top);
+
+        }
+        const links = document.querySelectorAll('.nav__link:not(.nav__telephone)');
+        console.log(links);
+
+        for (let i of links) {
+            console.log(i);
+            i.addEventListener('click', pageRoll);
+
+        }
+    </script>
+
 </body>
 
 </html>

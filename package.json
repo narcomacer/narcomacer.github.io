@@ -34,6 +34,7 @@
         "vinyl-ftp": "^0.6.1"
     },
     "dependencies": {
+        "@glidejs/glide": "^3.4.1",
         "bootstrap": "^4.5.0",
         "jshint": "^2.11.1",
         "less": "^3.10.3"

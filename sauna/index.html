@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document with less</title>
+    <link rel="stylesheet" href="l2-bundle.min.css">
+
+    <link href="http://allfont.ru/allfont.css?fonts=stylo-bold" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="owl-carusel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl-carusel/owl.theme.default.min.css" />
+
+
+
+
+</head>
+
+<body>
+
+
+
+    <nav class="nav">
+        <div class="nav__top">
+            <div class="nav__toggle m-show " onclick="toggleNav()">
+                <div class="nav__toggle__line"></div>
+                <div class="nav__toggle__line "></div>
+                <div class="nav__toggle__line "></div>
+            </div>
+
+            <a class="adress m-hide" href="">Мы находимся: г. Уфа, ул. Обской, 2
+
+                <span class="adress__icon"></span>
+            </a>
+
+            <div class="logo"></div>
+            <a href="#" class="phone m-hide">
+                <span class="phone__icon"></span>+7 (347)-225-75-18 </a>
+            <button class="btn">заказать звонок</button>
+
+
+        </div>
+        <div class="nav__bottom m-hide">
+            <a href="#">Главная</a>
+            <a href="#">Номера</a>
+            <a href="#">Цены</a>
+            <a href="#">Акции</a>
+            <a href="#">Преимущества</a>
+            <a href="#">Как мы работаем</a>
+            <a href="#">Отзывы</a>
+            <a href="#">Контакты</a>
+            <a href="#">О сауне</a>
+            <a href="#">Скидки</a>
+            <div class="nav__cross m-show" onclick="toggleNav()">×</div>
+        </div>
+    </nav>
+
+    <header class="header">
+        <div class="header__card">
+            <h1 class="header__card__title">Сауна оазис</h1>
+            <div class="header__card__small">отдохните с комфортом от повседневных будней</div>
+            <div class="header__card__text">вдвоем, с друзьями или семьей </div>
+        </div>
+
+    </header>
+
+    <section class="numbers">
+        <h2 class="numbers__title">наши номера</h2>
+        <div class="numbers__nav"></div>
+        <div class="numbers__slider owl-carousel owl-theme">
+            <div class="numbers__slide">
+                <div class="numbers__slide__img" style="background-image: url('img/sauna_10.jpg') ;"></div>
+
+                <div class="numbers__slide__title">номер 1</div>
+                <div class="numbers__slide__price">300 р</div>
+                <div class="numbers__slide__btn">Подробнее </div>
+            </div>
+
+            <div class="numbers__slide">
+                <div class="numbers__slide__img" style="background-image: url('img/sauna_11.jpg') ;"></div>
+
+                <div class="numbers__slide__title">номер 2</div>
+                <div class="numbers__slide__price">300 р</div>
+                <div class="numbers__slide__btn">Подробнее </div>
+            </div>
+
+            <div class="numbers__slide">
+                <div class="numbers__slide__img" style="background-image: url('img/sauna_20.jpg') ;"></div>
+
+                <div class="numbers__slide__title">номер 3</div>
+                <div class="numbers__slide__price">300 р</div>
+                <div class="numbers__slide__btn">Подробнее </div>
+            </div>
+
+            <div class="numbers__slide">
+                <div class="numbers__slide__img" style="background-image: url('img/sauna_32.jpg') ;"></div>
+
+                <div class="numbers__slide__title">номер 4</div>
+                <div class="numbers__slide__price">300 р</div>
+                <div class="numbers__slide__btn">Подробнее </div>
+            </div>
+        </div>
+
+        <div class="numbers__cards">
+            <div class="numbers__card card">
+                <div class="card__img" style="background-image: url('img/sauna.svg') ;" data-img='img/sauna.svg'></div>
+                <div class="card__title">удобно</div>
+                <div class="card__text">Номера с разными парными: финская или русская, а также чистая душевая, удобный бассейн, уединенная комнатка для двоих</div>
+            </div>
+            <div class="numbers__card card">
+                <div class="card__img" style="background-image: url('img/coffee-cup.svg') ;"></div>
+                <div class="card__title ">уютно</div>
+                <div class="card__text ">В кругу родных и друзей можно попариться и активно провести время, после чего попить горячего чайку и побеседовать</div>
+            </div>
+            <div class="numbers__card card ">
+                <div class="card__img " style="background-image: url('img/like.svg') ;" data-img='img/like.svg'></div>
+                <div class="card__title ">недорого</div>
+                <div class="card__text ">Цена в Уфе сауны «Оазис» очень низкая, а качество высокое</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="album">
+        <h2 class="album__title">Наша сауна</h2>
+
+        <div class="album__grid">
+            <div class="album__grid__text">
+                <h3>Сауна сегодня</h3>
+                <p>Это не только место, где можно попариться и помыться. Это заведение успешно сочетает в себе черты кафе и караоке-бара. Здесь можно разнообразно проводить досуг. Обычно каждая сауна имеет свои преимущества. В данном случае сауна с бассейном
+                    по цене вполне доступной может стать местом проведения самых разных мероприятий для коллективного отдыха - с хорошей парной и бассейном.</p>
+            </div>
+
+            <img src="img/1-l2.jpg" alt="" class="album__grid__img">
+            <img src="img/2-l2.jpg" alt="" class="album__grid__img">
+            <img src="img/3-l2.jpg" alt="" class="album__grid__img">
+            <img src="img/4-l2.jpg" alt="" class="album__grid__img">
+            <img src="img/5-l2.jpg" alt="" class="album__grid__img">
+        </div>
+    </section>
+
+    <section class="promotion">
+
+        <div class="promotion__nav"></div>
+        <div class="promotion__slider owl-carousel owl-theme">
+            <div class="promotion__slide">
+                <div class="promotion__slide__title">30 минут в подарок</div>
+                <div class="promotion__slide__text">При заказе от 3 часов</div>
+                <button class="btn">заказать звонок</button>
+            </div>
+
+            <div class="promotion__slide">
+                <div class="promotion__slide__title">50 минут в подарок</div>
+                <div class="promotion__slide__text">При заказе от 5 часов</div>
+                <button class="btn">заказать звонок</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="review">
+        <h2 class="review__title">Отзывы клиентов</h2>
+        <div class="review__nav"></div>
+        <div class="review__slider  owl-carousel owl-theme">
+
+            <div class="review__slide card">
+                <div class="card__img" style="background-image: url('img/face.svg') ;"></div>
+                <div class="card__title ">Ирина Петрова</div>
+                <div class="card__line"></div>
+                <div class="card__text ">С друзьями отмечали мальчишник. Незабываемые впечатления! Чисто, уютно. Отлично провели время!</div>
+            </div>
+
+            <div class="review__slide card">
+                <div class="card__img" style="background-image: url('img/face.svg') ;"></div>
+                <div class="card__title ">Ирина Петрова</div>
+                <div class="card__line"></div>
+                <div class="card__text ">С друзьями отмечали мальчишник. Незабываемые впечатления! Чисто, уютно. Отлично провели время!</div>
+            </div>
+
+            <div class="review__slide card">
+                <div class="card__img" style="background-image: url('img/face.svg') ;"></div>
+                <div class="card__title ">Ирина Петрова</div>
+                <div class="card__line"></div>
+                <div class="card__text ">С друзьями отмечали мальчишник. Незабываемые впечатления! Чисто, уютно. Отлично провели время!</div>
+            </div>
+
+            <div class="review__slide card">
+                <div class="card__img" style="background-image: url('img/face.svg') ;"></div>
+                <div class="card__title ">Ирина Петрова</div>
+                <div class="card__line"></div>
+                <div class="card__text ">С друзьями отмечали мальчишник. Незабываемые впечатления! Чисто, уютно. Отлично провели время!</div>
+            </div>
+        </div>
+        <div class="review__dropdown"></div>
+        <div class="review__btn btn">Добавить отзыв</div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__img-block">
+                <div class="logo"></div>
+                <img src="img/bucket.png" alt="bucket">
+            </div>
+
+            <div class="footer__links">
+                <a href="#">Главная</a>
+                <a href="#">Номера</a>
+                <a href="#">Цены</a>
+                <a href="#">Акции</a>
+                <a href="#">Преимущества</a>
+                <a href="#">Как мы работаем</a>
+                <a href="#">Отзывы</a>
+                <a href="#">Контакты</a>
+                <a href="#">О сауне</a>
+                <a href="#">Скидки</a>
+            </div>
+            <div class="footer__contacts"><a class="adress " href="">Мы находимся: г. Уфа, ул. Обской, 2
+
+                <span class="adress__icon"></span>
+            </a>
+
+
+                <a href="#" class="phone ">
+                    <span class="phone__icon"></span>+7 (347)-225-75-18 </a>
+                <button class="btn">заказать звонок</button>
+                <div class="social-icons">
+                    <div class="inst"></div>
+                    <div class="vk"></div>
+                    <div class="twi"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js "></script>
+    <script src="owl-carusel/owl.carousel.min.js"></script>
+    <script>
+        function toggleNav() {
+            document.querySelector('.nav__bottom').classList.toggle('m-hide');
+
+        }
+    </script>
+
+    <script>
+        jQuery(
+            function($) {
+                $(document).ready(function() {
+                    $('.numbers__slider').owlCarousel({
+                        loop: true, //Зацикливаем слайдер
+                        margin: 20, //Отступ от элемента справа 
+                        nav: true, // навигация
+                        autoplay: false, //Автозапуск слайдера
+                        dots: false,
+                        lazyLoad: true,
+                        navContainer: '.numbers__nav',
+                        responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                            0: {
+                                items: 1
+                            },
+
+                            600: {
+                                items: 2
+                            },
+
+                            900: {
+                                items: 3
+                            },
+
+                            1200: {
+                                items: 4
+                            },
+
+                        }
+                    });
+                });
+
+
+            });
+    </script>
+
+    <script>
+        jQuery(
+            function($) {
+                $(document).ready(function() {
+                    $('.promotion__slider').owlCarousel({
+                        loop: true, //Зацикливаем слайдер
+                        margin: 0, //Отступ от элемента справа 
+                        nav: true, // навигация
+                        autoplay: false, //Автозапуск слайдера
+                        dots: false,
+                        lazyLoad: true,
+                        navContainer: '.promotion__nav',
+                        responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                            0: {
+                                items: 1
+                            },
+
+
+                        }
+                    });
+                });
+
+
+            });
+    </script>
+
+    <script>
+        jQuery(
+            function($) {
+                $(document).ready(function() {
+                    $('.review__slider').owlCarousel({
+                        loop: true, //Зацикливаем слайдер
+                        margin: 0, //Отступ от элемента справа 
+                        nav: true, // навигация
+                        autoplay: false, //Автозапуск слайдера
+                        dots: false,
+                        lazyLoad: true,
+                        navContainer: '.review__nav',
+                        responsive: { //Адаптивность. Кол-во выводимых элементов при определенной ширине.
+                            0: {
+                                items: 1
+                            },
+
+                            600: {
+                                items: 2
+                            },
+
+                            900: {
+                                items: 3
+                            },
+
+
+
+                        }
+                    });
+                });
+
+
+            });
+    </script>
+</body>
+
+</html>

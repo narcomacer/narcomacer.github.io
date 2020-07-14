@@ -2,7 +2,7 @@
 .landings{
   .block(9%, 0);
   background-color: @darkest;
-  .grid(1fr, 43px minmax(500px, max-content) 50px, 0, 40px);
+  .grid(1fr, 43px minmax(500px, max-content) , 0, 40px);
   justify-items: center;
   padding-top: 130px;
   position: relative;
@@ -51,6 +51,7 @@
     background-color: @darkest;
     position: relative;
     box-shadow      : 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 0px 2px rgba(0, 255, 255, 0.12), 0px 4px 8px rgba(0,255, 255, 0.18);
+    margin-bottom: 4px;
   
     
     .grid(1fr, 120px  1em  max-content 40px,0, 18px)!important;
@@ -73,6 +74,12 @@
       width: var(--return);
       height: var(--return);
       border-radius: 50%;
+    }
+    
+    &__img--free{
+      width:auto;
+      border-radius: 0%;
+      
     }
     
     &__stars{

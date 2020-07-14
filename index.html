@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Константин Клименко|Разработчик</title>
     <link rel="stylesheet" href="bundle.min.css">
-
-
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
 
 
 
@@ -87,11 +87,11 @@
     </section>
 
 
-    <section class="landings" id="landings">
+    <section class="landings " id="landings">
         <h2 class="title">Примеры вёрстки</h2>
 
         <div class="landings__slider">
-            <article class="landings__card">
+            <article class="landings__card" data-glide-el="track">
 
                 <a target="_blank" href="/center_lp/">
                     <img src="img/brainstorming.svg" class="landings__card__img"> </img>
@@ -131,13 +131,104 @@
                 </div>
                 <div class="landings__card__arrow-down" onClick="openText(this)"></div>
             </article>
+            <article class="landings__card">
 
+                <a target="_blank" href="/sauna/">
+                    <img src="img/bucket.png" class="landings__card__img "> </img>
+                </a>
+
+
+                <a target="_blank" href="/sauna/" class="landings__card__title">Сауна "Оазис"
+                   
+                </a>
+
+
+                <div class="landings__card__text">
+                    <p> Главная страница сайта сауны.<br> Сетка сделана с помощью CSS Grid. <br> Препроцессор - less. Карусели сделаны на Slick и JQuery.<br><br><br>
+                    </p>
+                    <div class="white-gradient"></div>
+                </div>
+                <div class="landings__card__arrow-down" onClick="openText(this)"></div>
+            </article>
 
         </div>
 
+
     </section>
 
-    <script src="js/jquery-3.4.1.min.js"></script>
+    <section class="landings " id="bitrix_pages">
+        <h2 class="title">Примеры работ с 1С Bitrix</h2>
+
+        <div class="landings__slider">
+            <article class="landings__card">
+
+                <a target="_blank" href="https://xn----8sbdihbrep7azagdepew7k3b.xn--p1ai/">
+                    <img src="img/lex.png" class="landings__card__img"> </img>
+                </a>
+
+
+                <a target="_blank" href="https://xn----8sbdihbrep7azagdepew7k3b.xn--p1ai/" class="landings__card__title">Юристы Екатеринбург
+                   
+                </a>
+
+
+                <div class="landings__card__text">
+                    <p> Сайт юридического агентства.<br> Несколько лендингов объединены в рамках многостраничного сайта.<br> Информация выводится с помощью компонента News. <br> Для вёрстки использован bootstrap.
+                    </p>
+                    <div class="white-gradient"></div>
+                </div>
+                <div class="landings__card__arrow-down" onClick="openText(this)"></div>
+            </article>
+
+            <article class="landings__card">
+
+                <a target="_blank" href="https://xn----8sbwaiauhtjlneoz.xn--p1ai/">
+                    <img src="img/sts.png" class="landings__card__img"> </img>
+                </a>
+
+
+                <a target="_blank" href="https://xn----8sbwaiauhtjlneoz.xn--p1ai/" class="landings__card__title">Стройтехснаб
+                   
+                </a>
+
+
+                <div class="landings__card__text">
+                    <p> Сайт торгово-промышленной компании <br> Макет вёрстки превращён в шаблон Битрикс<br>
+                        <br><br><br><br>
+                    </p>
+                    <div class="white-gradient"></div>
+                </div>
+                <div class="landings__card__arrow-down" onClick="openText(this)"></div>
+            </article>
+            <article class="landings__card">
+
+                <a target="_blank" href="http://new.ovksistema.ru/">
+                    <img src="img/rab.png" class="landings__card__img "> </img>
+                </a>
+
+
+                <a target="_blank" href="http://new.ovksistema.ru/" class="landings__card__title">ОВК Система
+                   
+                </a>
+
+
+                <div class="landings__card__text">
+                    <p> Интернет-магазин вентилляционного оборудования<br> br> Макет вёрстки превращён в шаблон Битрикс<br>Использованы компоненты - Каталог, Новости и Галлерея <br> <br><br>
+                    </p>
+                    <div class="white-gradient"></div>
+                </div>
+                <div class="landings__card__arrow-down" onClick="openText(this)"></div>
+            </article>
+
+        </div>
+
+
+    </section>
+
+    <script type="text/javascript" src="center_lp/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="center_lp/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="center_lp/slick/slick.min.js"></script>
+
     <script>
         function openText(e) {
             e.classList.toggle('landings__card__arrow-up');
@@ -150,19 +241,36 @@
         const pageRoll = (e) => {
             e.preventDefault();
             const href = e.target.getAttribute('href');
-            console.log(href);
+
             document.querySelector(href).scrollIntoView(top);
 
         }
         const links = document.querySelectorAll('.nav__link:not(.nav__telephone)');
-        console.log(links);
+
 
         for (let i of links) {
-            console.log(i);
+
             i.addEventListener('click', pageRoll);
 
         }
     </script>
+
+    <script>
+        if (window.matchMedia("(max-width: 1000px)").matches) {
+            $('.landings__slider').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: false,
+                dots: true,
+                fade: true,
+
+
+            });
+        }
+    </script>
+
+
 
 </body>
 

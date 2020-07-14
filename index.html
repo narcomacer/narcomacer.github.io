@@ -22,8 +22,9 @@
         <div class="nav__title"></div>
 
 
-        <a href="" class="nav__link m-hide">Портфолио</a>
-        <a href="" class="nav__link m-hide">Навыки</a>
+
+        <a href="#skills" class="nav__link m-hide">Навыки</a>
+        <a href="#landings" class="nav__link m-hide">Портфолио</a>
         <a href="" class="nav__link m-hide">Информация</a>
 
         <a href="" class="nav__link m-hide">Контакты</a>
@@ -41,13 +42,12 @@
         <div class="header__main">
 
             <h1 class="header__title">Web-разработчик Константин Клименко</h1>
-            <div class="header__text">Frontend that never ends </div>
-            <button class="button">CALCULATE THE COST</button>
-            <button class="button  button--transparent">SUBMIT YOUR APPLICATION</button>
+            <div class="header__text"> </div>
+
         </div>
     </header>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <h3 class="skills__title">Навыки</h3>
         <div class="skills__content">
             <div class="skills__img"></div>
@@ -76,7 +76,7 @@
                 <div class="diagrams__row-title">Инструменты</div>
                 <div>JS, Node.js, Gulp, Webpack, React</div>
 
-                <div class="diagrams__row-title">Back-end </div>
+                <div class="diagrams__row-title">Back-end/ CMS </div>
                 <div class="diagrams__rectangle-4"></div>
 
                 <div class="diagrams__row-title">Инструменты</div>
@@ -87,7 +87,7 @@
     </section>
 
 
-    <section class="landings">
+    <section class="landings" id="landings">
         <h2 class="title">Примеры вёрстки</h2>
 
         <div class="landings__slider">
@@ -104,13 +104,33 @@
 
 
                 <div class="landings__card__text">
-                    <p> Рекламный лендинг дизайнерского агентства
+                    <p> Рекламный лендинг дизайнерского агентства.<br> Для лучшей адаптивности были использованы css-переменные. Сетка сделана с помощью CSS Grid. <br> Препроцессор - less. Исходный код CSS разбит на модули, которые собираются с помощью Gulp.Карусели
+                        сделаны на Slick и JQuery.
                     </p>
                     <div class="white-gradient"></div>
                 </div>
                 <div class="landings__card__arrow-down" onClick="openText(this)"></div>
             </article>
 
+            <article class="landings__card">
+
+                <a target="_blank" href="/center_lp/">
+                    <img src="img/car.jpg" class="landings__card__img"> </img>
+                </a>
+
+
+                <a target="_blank" href="http://site.hostronavt.ru/" class="landings__card__title">Paint resident
+                   
+                </a>
+
+
+                <div class="landings__card__text">
+                    <p> Рекламный лендинг автосалона. Сетка сделана с помощью CSS Grid. <br> Макет вёрстки превращён в шаблон Wordpress<br>
+                    </p> Использован дизайн со статичными блоками информации, реализованный с помощью position: sticky.
+                    <div class="white-gradient"></div>
+                </div>
+                <div class="landings__card__arrow-down" onClick="openText(this)"></div>
+            </article>
 
 
         </div>

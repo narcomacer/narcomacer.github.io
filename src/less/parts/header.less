@@ -28,8 +28,33 @@
     padding: 1em;
     vertical-align: middle;
     height:100%;
+    
+    
+    
     @media (max-width: @size-mobile) {
     display: none;
+    
+    
+    }
+    
+    &__link{
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-top: 10px;
+      
+      
+      &--facebook{
+        .bg-contain('img/facebook.svg')
+      }
+      
+      &--linkedin{
+        .bg-contain('img/linkedin.svg')
+      }
+      
+      &--vk{
+        .bg-contain('img/vk.svg')
+      }
     }
   }
   

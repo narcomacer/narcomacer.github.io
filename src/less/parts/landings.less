@@ -1,138 +1,145 @@
 /* landings */
-.landings{
+.landings {
   .block(9%, 0);
   background-color: @darkest;
-  .grid(1fr, 43px minmax(500px, max-content) , 0, 40px);
+  .grid(1fr, 43px minmax(500px, max-content), 0, 40px);
   justify-items: center;
-  padding-top: 130px;
-  position: relative;
-  color: @white;
-  @media (max-width: @size-tablete){
-    row-gap: 10px;
+  padding-top  : 130px;
+  position     : relative;
+  color        : @white;
+
+  @media (max-width: @size-tablete) {
+    row-gap    : 10px;
     padding-top: 30px;
   }
-  &__links{
-    height: 45px;
-    width:254px;
+
+  &__links {
+    height  : 45px;
+    width   : 254px;
     position: absolute;
-    right:130px;
-    top:130px;
+    right   : 130px;
+    top     : 130px;
     .grid(repeat(4, 1fr));
     justify-items: center;
+
     @media (max-width: @size-tablete) {
-      display: none!important;
+      display: none !important;
     }
   }
 
-  
-  &__slider{
-    
+
+  &__slider {
+
     .grid(1fr 1fr 1fr, max-content, 20px);
-    padding-top:40px;
-    @media (max-width: @size-tablete){
+    padding-top: 40px;
+
+    @media (max-width: @size-tablete) {
       grid-template-columns: 1fr;
-      padding-top:0px;
-     }
-    
-  .slick-dots{
-    .flex-row!important;
-    justify-content: center;
-    
-    li{
-      border-radius: 50%;
+      padding-top          : 0px;
     }
-  }  
-    
+
+    .slick-dots {
+      .flex-row !important;
+      justify-content: center;
+
+      li {
+        border-radius: 50%;
+      }
+    }
+
   }
-  
+
   &__card {
-    min-height: 480px;
-    width: 365px;
+    min-height      : 480px;
+    width           : 365px;
     background-color: @darkest;
-    position: relative;
-    box-shadow      : 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 0px 2px rgba(0, 255, 255, 0.12), 0px 4px 8px rgba(0,255, 255, 0.18);
-    margin-bottom: 4px;
-  
-    
-    .grid(1fr, 120px  1em  max-content 40px,0, 18px)!important;
+    position        : relative;
+    box-shadow      : 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 0px 2px rgba(0, 255, 255, 0.12), 0px 4px 8px rgba(0, 255, 255, 0.18);
+    margin-bottom   : 4px;
+
+
+    .grid(1fr, 120px 1em max-content 40px, 0, 18px) !important;
     justify-items: center;
-    @media (max-width: @size-tablete){
-      box-shadow:none;
+
+    @media (max-width: @size-tablete) {
+      box-shadow: none;
     }
-    
-    &__title{
+
+    &__title {
       font-size: 16px;
-      color:currentColor;
-      &:hover{
+      color    : currentColor;
+
+      &:hover {
         color: currentColor;
       }
     }
-    
-    &__img{
+
+    &__img {
       margin-top: 10px;
-      .r-size(320px,320,1440,100px,100,120);
-      width: var(--return);
-      height: var(--return);
+      .r-size(320px, 320, 1440, 100px, 100, 120);
+      width        : var(--return);
+      height       : var(--return);
       border-radius: 50%;
     }
-    
-    &__img--free{
-      width:auto;
+
+    &__img--free {
+      width        : auto;
       border-radius: 0%;
-      
+
     }
-    
-    &__stars{
-      .grid(repeat(5, 25px),auto,8px);
+
+    &__stars {
+      .grid(repeat(5, 25px), auto, 8px);
     }
-    
-    &__text{
-      max-width: 100vw;
-      max-height: 175px;
+
+    &__text {
+      max-width   : 100vw;
+      max-height  : 175px;
       margin-right: 10%;
-      margin-left: 10%;
-      overflow: hidden;
-      position: relative;
+      margin-left : 10%;
+      overflow    : hidden;
+      position    : relative;
     }
-    
-    &__text--full{
+
+    &__text--full {
       max-height: 4000px;
-      .white-gradient{
+
+      .white-gradient {
         display: none;
       }
     }
-    
-    &__arrow-down{
+
+    &__arrow-down {
       .bg-cover('img/arrow.svg');
-      width   : 14px;
-      height  : 25px;
+      width    : 14px;
+      height   : 25px;
       transform: rotate(90deg);
-      cursor: pointer;
+      cursor   : pointer;
     }
-    
+
     &__arrow-up {
-      transform: rotate(-90deg)!important;
+      transform: rotate(-90deg) !important;
     }
   }
 }
 
-.star{
-  width: 25px;
+.star {
+  width : 25px;
   height: 25px;
   .bg-contain('img/star.svg');
 }
 
-.white-gradient{
+.white-gradient {
   position: absolute;
-  top:0;
-  bottom: 0;
-  left:0;
-  right:0;
-  z-index: 3;
+  top     : 0;
+  bottom  : 0;
+  left    : 0;
+  right   : 0;
+  z-index : 3;
   background: linear-gradient(to bottom,
-      rgba(40,40,40,0) 0%,
-      
-      rgba(40,40,40,70) 120%);
+      rgba(40, 40, 40, 0) 0%,
+
+      rgba(40, 40, 40, 70) 120%);
 }
 
 /* landings  ends*/

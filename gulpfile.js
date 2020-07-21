@@ -1,4 +1,6 @@
 const gulp = require('gulp');
+const pug = require('gulp-pug');
+const pugbem = require('gulp-pugbem');
 
 // gulp.task('hello', function(w) {
 //     console.log('hello world');
@@ -20,9 +22,11 @@ const pathName = '.';
 
 const config = {
     path: {
-        less: `${pathName}/src/less/*.less`,
-        less2: `${pathName}/src/less/parts/*.less`,
+        less: `${pathName}/src/*.less`,
+        less2: `${pathName}/src/parts/**/*.less`,
         html: `${pathName}/index.html`,
+        pug: `${pathName}/src/*.pug`,
+        pug2: `${pathName}/src/parts/**/*.pug`,
 
     },
     output: {
@@ -33,6 +37,14 @@ const config = {
         newHtml: `/tmp/fz3temp-2`
     }
 };
+
+gulp.task('pages', function() {
+    return gulp.src(config.path.pug)
+        .pipe(pug({
+            plugins: [pugbem]
+        }))
+        .pipe(gulp.dest(`./${pathName}/`));
+});
 
 
 
@@ -67,6 +79,8 @@ gulp.task('serve', (done) => {
     });
     gulp.watch(config.path.less, gulp.series('less'));
     gulp.watch(config.path.less2, gulp.series('less'));
+    gulp.watch(config.path.pug, gulp.series('pages'));
+    gulp.watch(config.path.pug2, gulp.series('pages'));
     //, 'push', 'pushCss'));
     gulp.watch(config.path.html).on('change', () => {
         browserSync.reload();
@@ -83,4 +97,4 @@ const globs = [
 
 
 
-gulp.task('default', gulp.series('less', 'serve'));
+gulp.task('default', gulp.series('less', 'pages', 'serve'));

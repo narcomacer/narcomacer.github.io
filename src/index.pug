@@ -8,12 +8,16 @@ head
     title Константин Клименко|Разработчик
     link(rel="stylesheet" href="bundle.min.css")
 body    
-    include parts/nav/nav.html
+    include parts/nav/nav.pug
 
-    include parts/header/header.html
-    include parts/skills/skills.html
+    include parts/header/header.pug
+    include parts/skills/skills.pug
     include parts/landings/landings.html
     include parts/landings/bitrix_pages.html
+
+    script
+        include parts/scripts/openText.js
+        include parts/scripts/pageRoll.js
 
 
 

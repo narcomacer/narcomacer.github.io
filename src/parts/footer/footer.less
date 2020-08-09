@@ -1,5 +1,24 @@
-.footer{
-  .block(9%, 0);
+
+
+.footer {
+  
+  .block(9%, 15vh);
   background-color: @darkest;
-  padding-top  : 80px;
+ 
+
+  &__title {
+    .block-title;
+  }
+
+  &__content {
+    display              : grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap : 1em;
+    @media(max-width:@size-mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: left;
+    }
+
+  }
+
 }

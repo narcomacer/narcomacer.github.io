@@ -12,15 +12,24 @@
   
   &__title{
     padding-bottom: 80px;
+    
   }
   
   &__img{
-    height: 400px;
-    object-fit: contain;
-    visibility: hidden;
+    max-height: 100%;
+    max-width: 100%;   
+  margin:auto
   }
   
-  &__img.glide__slide--active,&__img.glide__slide--active+img,&__img.glide__slide--active+img+img{
+  &__a{
+    display: inline-flex;
+    visibility: hidden;
+    height: 280px;
+    
+    object-fit: contain;
+  }
+  
+  &__a.glide__slide--active,&__a.glide__slide--active+a,&__a.glide__slide--active+a+a{
     visibility: visible;
   } 
   

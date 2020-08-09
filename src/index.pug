@@ -12,13 +12,21 @@ body
 
     include parts/header/header.pug
     include parts/skills/skills.pug
-    include parts/landings/landings.html
+    include parts/landings/landings.pug
     include parts/landings/bitrix_pages.html
-    include parts/sert/sert.html
+    include parts/sert/sert.pug
+    
+    
 
     script
         include parts/scripts/openText.js
         include parts/scripts/pageRoll.js
+    script    
+        include ../node_modules/@glidejs/glide/dist/glide.min.js
+        
+    script
+        include parts/scripts/glide_config.js
+        
 
 
 

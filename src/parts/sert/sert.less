@@ -1,0 +1,57 @@
+.sert{
+  .block(9%, 0);
+  background-color: @darkest;
+  padding-top  : 80px;
+  
+
+  @media (max-width: @size-tablete) {
+    text-align: center;
+    padding-top: 30px;
+  
+  }
+  
+  &__title{
+    padding-bottom: 80px;
+  }
+  
+  &__img{
+    height: 400px;
+    object-fit: contain;
+    visibility: hidden;
+  }
+  
+  &__img.glide__slide--active,&__img.glide__slide--active+img,&__img.glide__slide--active+img+img{
+    visibility: visible;
+  } 
+  
+  
+}
+
+.glide {
+  position: relative;
+  &__arrow{
+    position: absolute;
+    top:50%;
+    background-color: @blue;
+    color:@darkest;
+    width: 1em;
+    height:1em;
+    border-radius: 50%;
+    text-align: center;
+    padding-bottom: 1.3em;
+    cursor: pointer;
+    
+    &:hover{
+      background-color: lighten(@blue, 30%);
+    }
+    
+    &--right{
+      right:-40px;
+    }
+    
+    &--left{
+      left:-40px;
+    }
+  }
+}
+

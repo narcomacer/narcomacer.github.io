@@ -39,6 +39,7 @@
         "@glidejs/glide": "^3.4.1",
         "bootstrap": "^4.5.0",
         "jshint": "^2.11.1",
-        "less": "^3.10.3"
+        "less": "^3.10.3",
+        "lightbox2": "^2.11.3"
     }
 }

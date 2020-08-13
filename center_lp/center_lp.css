@@ -1481,7 +1481,7 @@ ul {
 
 .reviews__card {
     min-height: 480px;
-    width: 365px;
+    max-width: 365px;
     position: relative;
     box-shadow: 0 0 1px rgba(0, 0, 0, .4), 0 0 2px rgba(255, 102, 0, .12), 0 4px 8px rgba(255, 102, 0, .18);
     display: grid!important;
@@ -1495,7 +1495,8 @@ ul {
 
 @media (max-width:1232px) {
     .reviews__card {
-        box-shadow: none
+        box-shadow: none;
+        max-width: 100vw
     }
 }
 

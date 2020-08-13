@@ -12,4 +12,18 @@ var glide1 = new Glide('.glide', {
     }
 });
 
+
+if (window.matchMedia("(max-width: 1200px)").matches) {
+    var glide2 = new Glide('.glide2', {
+        type: 'carousel',
+        startAt: 0,
+        perView: 1,
+
+    });
+
+    glide2.mount();
+}
+
+
+
 glide1.mount();

@@ -1,0 +1,86 @@
+/* first  */
+
+.first {
+  .grid(50% 50%, auto);
+  .block(9.5%, 0);
+  padding-top: 28px;
+
+  @media (max-width: @size-tablete) {
+    .grid(1fr 0);
+    .bg-cover('img/header-mobile.png');
+  }
+
+  @media (min-width: @size-tablete) {
+    position: relative;
+    &__img {
+      height: 120%;
+      width : 140%;
+      .bg-contain('img/header-img.png');
+      position: relative;
+      top     : -65px;
+      right   : -20px;
+    }
+  }
+
+  &__text {
+    .grid(1fr, 14.5vw 5.6em auto, 0, 20px);  
+
+    @media (max-width: @size-tablete) {
+      .grid(1.8fr, 1.45fr 1fr 1.04fr, 0, 0);
+      align-items  : center;
+      justify-items: center;
+      color: @white;
+
+    }
+
+  }
+
+  &__text-big {
+    .txt-36;
+    align-self: end;
+    max-width: 100%;
+  }
+
+  &__text-small {
+    .txt-18;
+  }
+
+  &__link {
+    .txt-16;
+    text-align    : center;
+    justify-self  : center;
+    vertical-align: middle;
+    border-bottom : 1px solid @black;
+    color: @black;
+
+    &:hover {
+      text-decoration: none;
+      color          : @blue;
+      border-bottom  : 1px solid @blue;
+    }
+  }
+
+  &__buttons {
+    padding-top: 8px;
+    .grid(1fr 1fr);
+    align-items  : center;
+    justify-items: start;
+
+    @media (max-width: @size-tablete) {
+      padding-top: 21.5px;
+      .grid(1fr, 1fr 1fr,0, 3px);
+    }
+  }
+
+  &__grid {
+    padding-top: 73px;
+    .grid(0.65fr 1fr 1fr, 1fr 1fr, 0px, 0px);
+
+    &__title {
+      font-size: 28px;
+      color    : @orange;
+    }
+  }
+}
+
+/* first ends */

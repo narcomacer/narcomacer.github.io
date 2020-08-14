@@ -1,0 +1,23 @@
+.brief{
+  .bg-cover('img/blue-bg.svg');
+  color: @white;
+  width: 100%;
+ 
+  @media (max-width: @size-tablete) {
+    .bg-cover('img/blue-bg.svg');
+    padding-top: 0px;
+    padding-bottom: 100px;
+  }
+  
+  .contact{
+    padding-top: 90px;
+    padding-bottom: 40px;
+  }
+  
+  &__after{
+    width: 100%;
+    height: 8.6vw;
+    margin-top: -4px;
+    .bg-cover('img/blue-bg2.svg');
+  }
+}

@@ -1,0 +1,96 @@
+
+
+/*special   */
+
+.special {
+ 
+  .block(9.5%, 0);
+  &__block{
+    .grid(1fr 1fr, auto, minmax(10vw,140px));
+  grid-template-areas:"text img";
+  align-items: center;
+  margin-bottom: 20px;
+   
+  @media (max-width: @size-mobile){
+    display: block;
+  }
+  
+  
+  &--invert{
+    grid-template-areas:"img text";
+  }
+  }
+  
+  &__img{
+    grid-area: img;
+    width:100% ;
+    height: 25vw;
+    min-height: 114px;
+    
+    &--1{
+      .bg-contain("img/special/calendar.svg");
+      background-position: 0 50%;
+    }
+    
+    &--2{
+      .bg-contain("img/special/brainstorming.svg");
+      background-position: 100% 50%;
+    }
+    &--3{
+      .bg-contain("img/special/facts.svg")
+    }
+   
+    &--4{
+      .bg-contain("img/special/photo1.png");
+      min-height: 191px;
+    }
+   
+    &--5{
+      .bg-contain("img/special/photo2.png");
+      min-height: 191px;
+    }
+    
+    &--6{
+      .bg-contain("img/special/gift.png");
+      min-height: 191px;
+    }
+   
+  }
+  
+  &__text{
+    grid-area: text;
+    .txt-18;
+  }
+  
+  
+}
+
+/*special ends   */
+
+.important{
+  color:@orange;
+}
+
+.quote {
+ .txt-16;
+  display: block;
+  .grid(1fr 6fr 1fr);
+  align-items: center;
+  
+  &:after{
+    content:" ";
+    display: block;
+    .bg-contain("img/quote1.svg");
+    width: 2em;
+    height: 2em;
+  }
+  
+  &:before{
+    content:" ";
+    display: block;
+    .bg-contain("img/quote1.svg");
+    width: 2em;
+    height: 2em;
+    transform: rotate(180deg);
+  }
+}

@@ -1,0 +1,151 @@
+/* steps */
+
+.steps{
+  .block(13.5%);
+  padding-top: 0;  
+  height: 1570px;
+  .bg-100('img/steps/process-line.svg',64%, 50%, 70%);
+  position: relative;
+  
+  
+  
+  @media (max-width: @size-tablete){
+    height:auto;
+    max-height: none;
+    .bg-contain('img/steps/process-line-mobile.svg');
+    background-position: 0% 50%;
+  }
+  
+  
+  &__card{
+    
+    width: 33vw;
+    max-width: 480px;
+    .grid(1fr 130px,20px 100px auto,20px,10px);
+    grid-template-areas: "title img" "text img" "text .";
+    position: absolute;
+   
+    justify-items: end;
+    
+    
+    &--reverse{
+      .grid(130px 1fr ,20px 100px auto,20px,10px);
+      grid-template-areas: "img title" "img text" ". text";
+      justify-items: start;
+    }
+    
+    @media (max-width: @size-tablete) {
+      position:initial;
+      width: 95%;
+      margin-left: 5%;
+      justify-items: start;
+      .grid(80px 1fr, 80px auto, 0,10px);
+      grid-template-areas: "img ." "title title" "text text" ;
+    }
+    
+    &__icon{
+      grid-area: img;
+      border: 2px solid @blue;
+      border-radius: 50%;
+      justify-self: stretch
+    }
+    
+    &__title{
+      grid-area: title;
+      .txt-20;
+      font-weight: bold;
+    }
+    
+    &__text{
+      grid-area: text;
+      align-self: center;
+      text-align: justify;
+    }
+    
+    &--1 {
+      top: 9.9% ;
+    left: 16.4%;
+    }
+    
+    &--1 &__icon{
+      .bg-100('img/steps/email.svg',50%,50%,75%);
+    }
+    
+    &--2 {
+      top: 9.9% ;
+      left: 57.4%;
+    }
+    
+    &--2 &__icon{
+      .bg-100('img/steps/calculator.svg',50%,50%,75%); 
+    }
+    &--3 {
+      top: 26.9% ;
+      left: 45.7%;
+    }
+    
+    &--3 &__icon{
+      .bg-100('img/steps/chat.svg',50%,50%,75%);
+    }
+    &--4 {
+      top: 29.7% ;
+      left: 7.6%;
+    }
+    
+    &--4 &__icon{
+      .bg-100('img/steps/pen.svg',50%,50%,75%);
+    }
+    &--5 {
+      top: 46.3% ;
+      left: 24.4%;
+    }
+    
+    &--5 &__icon{
+      .bg-100('img/steps/coin.svg',50%,50%,75%);
+    }
+    &--6 {
+      top: 62.9% ;
+      left: 13.4%;
+    }
+    
+    &--6 &__icon{
+      .bg-100('img/steps/desk.svg',50%,50%,75%);
+    }
+    &--7 {
+      top: 62.8% ;
+      left: 47.5%;
+    }
+    
+    &--7 &__icon{
+      .bg-100('img/steps/computer.svg',50%,50%,75%);
+    }
+    &--8 {
+      top: 81.9% ;
+      left: 46.5%;
+    }
+    
+    &--8 &__icon{
+      .bg-100('img/steps/handshake.svg',50%,50%,75%);
+    }
+    
+    &--9 {
+      top: 81.9% ;
+      left: 8.6%;
+    }
+    
+    &--9 &__icon{
+      .bg-100('img/steps/target.svg',50%,50%,75%);
+    }
+  }
+  
+  &__subtitle{
+    position: absolute;
+    bottom: 50px;
+    left:0;
+    right: 0;
+    text-align: center;
+    .txt-20;
+  font-weight: bold;}
+}
+
+/* steps end */

@@ -16,7 +16,15 @@ const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
 
-const pathName = '.';
+const pathName = 'center_lp';
+let dot = '.';
+
+if (pathName == '.') {
+    dot = '';
+} else {
+    dot = '.';
+}
+
 
 
 
@@ -30,7 +38,7 @@ const config = {
 
     },
     output: {
-        cssName: `bundle${pathName}min.css`,
+        cssName: `bundle${dot}${pathName}${dot}min.css`,
         path: `${pathName}`,
         path_file: `${pathName}/index.html`,
         path_file_css: `${pathName}/${pathName}.css`,

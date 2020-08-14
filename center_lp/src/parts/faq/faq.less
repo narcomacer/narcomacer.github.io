@@ -1,0 +1,137 @@
+/* FAQ */
+.faq{
+  position: relative;
+  padding-top: 70px;
+  
+  @media (max-width: @size-tablete){
+    padding-top: 30px
+  }
+  
+  &__bg{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    .bg-cover('img/projects-back.svg');
+    
+    z-index: -2;
+    transform: scale(-1, 1);
+  }
+  
+  & &__bg{
+    .r-size(320px,320,1440,320px,320,619);
+    top:var(--return);
+    @media (max-width: @size-tablete){
+      
+    z-index: -3;
+    }
+  }
+  
+  &__cards{
+  position: relative;
+  
+    .block(23.5%, 0);
+    .grid(1fr, repeat(3, max-content),0,40px);
+    padding-top: 12vw;
+   
+    @media (max-width: @size-tablete){
+      .block(9.5%, 0);
+    }
+  }
+  
+  &__card{
+    background-color: @white;
+    padding:6.5%;
+    padding-left: 4%;
+    position: relative;
+    .grid( 7vw 1fr, 1em, 30px, 2em);
+    grid-template-areas: "img title" "img text";
+    box-shadow      : 0px 0px 1px rgba(0, 0, 0, 0.4), 0px 0px 2px rgba(255, 102, 0, 0.12), 0px 4px 8px rgba(255, 102, 0, 0.18);
+    @media (max-width: @size-tablete){
+      display: block;
+    }
+    &__img-in{
+      grid-area: img;
+      align-self: center;
+      .r-size(320px,320,1440,45px,45,100);
+      width:var(--return);
+    }
+    
+    &__img-out{
+      position: absolute;      
+      top: 35%; 
+      @media (max-width: @size-tablete){
+        display:none ;
+      }
+           
+    }
+    
+    &:nth-of-type(2n){
+      img {left: -200px;
+        
+      }
+    }
+      
+    
+    &:nth-of-type(2n-1){
+      img {right: -200px;
+      }
+    }
+    
+    &__title{
+      grid-area: title;
+      .txt-24;
+      font-weight: bold;
+    }
+    
+    &__text{
+      grid-area: text;
+      .txt-16;
+    }
+  }
+  
+  &__after {
+    display: block;
+    width: 100%;
+    height: 19.444vw;
+    margin-top: -4px;
+     
+    .bg-contain('img/projects-back2.svg');
+    transform: scale(-1, 1);
+  }
+}
+
+.intro{
+  position: relative;
+  .block(13.5%, 0);
+  .grid(1fr 1fr, auto, 11vw);
+  padding-top: 50px;
+  z-index:-2;
+  @media (max-width: @size-mobile){
+    display: block;
+    
+  }
+  &__img{
+    width: 27.6vw;
+    height: 38.5vw;
+    z-index: -3;
+    grid-column: ~"2/3";
+    @media (max-width: @size-mobile){
+      float:right;
+      width: 39vw;
+    height: 52vw;
+    }
+  }
+  &__text{
+    align-self: center;
+    .txt-16;
+    grid-column: ~"1/2";
+    grid-row: ~"1/2";
+  }
+}
+
+
+
+
+/* FAQ  ends*/

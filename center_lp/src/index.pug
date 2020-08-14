@@ -1,0 +1,44 @@
+doctype html 
+html(lang="ru") 
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(author="narcomacer@gmail.com")
+    title Centr LP
+    link(rel="stylesheet", href="bundle.center_lp.min.css")
+    
+body
+    include parts/nav/nav.pug
+    include parts/first/first.pug
+    include parts/projects/projects.pug
+    include parts/contact/contact.pug
+    include parts/command/command.pug
+    include parts/reviews/reviews.pug
+    include parts/faq/faq.pug
+    include parts/steps/steps.pug
+    include parts/brief/brief.pug
+    include parts/special/special.pug
+    include parts/contact/contact2.pug
+    include parts/facts/facts.pug
+    include parts/addition/addition.pug
+    include parts/special/special.pug
+    include parts/adress/adress.pug
+    include parts/special/gift.pug
+    include parts/contact/contact3.pug
+    include parts/footer/footer.pug
+
+script(type="text/javascript", src="js/jquery-1.11.0.min.js")
+script(type="text/javascript", src="js/jquery-migrate-1.2.1.min.js")
+script(type="text/javascript", src="slick/slick.min.js")
+
+script
+    include parts/scripts/sliders.js
+script
+    include parts/scripts/scroll_to_block.js
+script
+    include parts/scripts/scroll_to_form.js
+script
+    include parts/scripts/simple-mailer.js
+    
+

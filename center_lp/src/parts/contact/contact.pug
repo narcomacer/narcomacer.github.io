@@ -1,0 +1,19 @@
+section.contact#contact
+  .contact__form.contact-form#contact-form_1(data-tema="Хочу рассчёт")
+    .contact__text.title
+      nowrap Понравились наши работы?
+    .contact__text.subtitle.contact-form__description
+      | Получите расчёт
+
+      nowrap.
+        стоимости дизайн-проекта 
+      nowrap/
+        
+      | за час
+
+    input.contact__name.contact-form__input_name(type="text", name="name", placeholder="Имя")
+    input.contact__phone.contact-form__input_tel(name="tel", type="tel", placeholder="Номер телефона")
+    button.button.contact-form__button(onclick="SimpleMailer(this);") Хочу рассчет
+    .circle.circle1
+    .circle.circle2
+    .circle.circle3

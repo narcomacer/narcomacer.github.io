@@ -1,0 +1,11 @@
+section.brief#brief
+  .contact
+    .contact__form.contact-form#contact-form_2(data-tema="Получить анкету")
+      .contact__text.title
+        nowrap Опишите вашу задачу в простой анкете
+      .contact__text.subtitle.contact-form__description
+        nowrap Хотите заполнить?
+      input.contact__name.contact-form__input_name(type="text", name="name", placeholder="Имя")
+      input.contact__phone.contact-form__input_tel(name="tel", type="tel", placeholder="Номер телефона")
+      button.button.contact-form__button(onclick="SimpleMailer(this);") Получить анкету
+.brief__after

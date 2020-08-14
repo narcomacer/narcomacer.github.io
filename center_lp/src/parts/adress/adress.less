@@ -1,0 +1,33 @@
+/* adress */
+.adress{
+  .block(9.5%);
+  .grid(1fr 1fr, auto repeat(2, 3em) auto , 20px);
+  grid-template-areas: "a map" "b map" "c map" "d map";
+  
+  
+  &__info{
+    .flex-col;
+    align-content: space-around;
+  }
+  
+  &__title{
+    .txt-32;
+  }
+  
+  &__text{
+    .txt-24;
+    
+    
+  }
+  
+  &__map{
+    grid-area: map;
+    min-height: 32vw;
+  }
+  
+  @media (max-width: @size-tablete){
+    display: block;
+  }
+  
+}
+/* adress end */

@@ -1,0 +1,112 @@
+/* contact  */
+
+.contact {
+  &__name, &__phone {
+    cursor: text;
+  }
+
+  .block(13.5%, 0);
+  height     : 489;
+  margin     : auto;
+  padding-top: 70px;
+  padding-bottom: 100px;
+  margin-top: 20px
+  ;
+
+
+
+  &__text {
+    grid-column: ~"1/4";
+    align-self: center;
+  }
+
+  &__form {
+    .grid(1fr 1fr 1.1fr, 1fr 1fr 1fr,30px,23px);
+    position: relative;
+    align-items: end;
+    align-content: center;
+   
+  }
+
+  .circle {
+    background-color: @blue;
+    border-radius   : 50%;
+    position        : absolute;
+  }
+
+  .circle1 {
+    .r-size(320px,320 ,1440 , 40px, 40, 100);
+    width : var(--return);
+    height: var(--return);
+    top: calc(-1.8 * var(--return));
+    left: calc(-0.2 * var(--return));
+    /* for chrome */
+    @supports (width:min(40px, 100px) ){
+      width :clamp(40px,var(--return), 100px) ;
+    height: clamp(40px,var(--return), 100px);
+    
+    top: ~"clamp(-180px, -1.8 * var(--return), -72px)";
+    left: ~"clamp(-20px,-0.2 * var(--return),-8px)";
+    }
+    @media (max-width: @size-mobile){        
+        top: -20.5vw;
+        left: -8.5vw;
+    }
+  }
+  
+  .circle2 {
+    .r-size(320px,320 ,1440 , 20px, 20, 62);
+    width : var(--return);
+    height: var(--return);  
+    left: calc(2 * var(--return));
+    top:calc(-1.9 * var(--return));
+    @supports (width:min(40px, 100px) ){
+    width :clamp(20px,var(--return), 62px) ;
+    height: clamp(20px,var(--return), 62px);  
+    left: ~"clamp(40px,2 * var(--return), 124px)";
+    top:~"clamp(-120px,-1.9 * var(--return), -32px)";
+  }}
+  .circle3 {
+    .r-size(320px,320 ,1440 , 23px, 23, 45);
+    width : var(--return);
+    height: var(--return); 
+    bottom: calc(-2.4 * var(--return));
+    right: calc(0.5 * var(--return));
+    @supports (width:min(40px, 100px) ){width : clamp(23px,var(--return), 45px);
+      height: clamp(23px,var(--return), 45px);
+     
+      bottom:~"clamp(-108px,-2.4 * var(--return), -55px)" ;
+      right: ~"clamp(12px,0.5 * var(--return), 23px)" ;}
+    
+
+  }
+  
+  .button{
+    position: relative;
+    left:-27px;
+  }
+
+
+  @media (max-width: @size-tablete) {
+    width : 90%;
+    height: auto;
+    padding-top: 120px;
+    
+    &__form{
+      .grid(1fr, 0.9fr 1fr 1fr 1.5fr ,30px,13px);
+      align-items: center;
+      justify-items: center;
+    }
+    
+    &__text{
+      grid-column: 1;
+    }
+    
+    .button{
+      position: static;
+    }
+  }
+  
+}
+
+/* contact  ends*/

@@ -1,0 +1,115 @@
+/* command  */
+.command{
+  padding-bottom: 150px;
+  
+  .bg-100('img/command-back.svg');
+  .vertical-grid-dif(150px auto auto, 50px);
+  position   : relative;
+  align-items: end;
+  --bg-size: contain;
+  max-width: 1440px;
+  margin: auto;
+
+  
+  
+  &__arrow-right,
+  &__arrow-left {
+    .bg-cover('img/arrow.svg');
+    width   : 14px;
+    height  : 25px;
+    position: absolute;
+    top     : 30%;
+    cursor  : pointer;
+    z-index: 20;
+  }
+
+  &__arrow-left {
+    left     : 5vw;
+    transform: rotate(180deg);
+  }
+
+  &__arrow-right {
+    right: 7vw;
+  }
+
+  
+  .title{  
+    color:@white;   
+    font-weight: bold;
+    position: relative;
+    justify-self: start;
+    left:9.5%;
+    
+  } 
+  
+  
+  &__slider{
+    .block(9.5%, 0);
+    position: relative;
+  }
+  
+  &__grid {
+    .grid( 1fr 1fr, auto, 30px)!important;
+    grid-template-areas: "text img";
+    color: @white;
+    max-width: 1166.4px ;
+    @media (max-width: @size-tablete){
+      .grid(1fr, auto)!important;
+      grid-template-areas:  "img" "text";
+    }
+  }
+  
+  &__text {
+    padding-top: 20px;
+    padding-right: 15%;
+    grid-area: text;
+  }
+  
+  &__img{
+    grid-area: img;
+    max-width: 365px;
+    @media (max-width: @size-tablete){
+      width: 66%;
+      height:auto;
+      align-self: center;
+      justify-self: center;
+    }
+  }
+  
+  &__title-box{
+    border-left: 4px solid @light_orange;
+    padding-left: 30px;
+    line-height: 140%;
+    
+    
+    &__title{
+      .txt-24;
+      font-weight: bold;
+    }
+    
+    &__subtitle{
+      .txt-20;
+      font-weight: bold;
+    }
+  }
+  
+  @media (max-width: @size-tablete) {
+    display           : block;
+    --bg-y: 320px;
+    --bg-x: 50%;
+    --bg-size: 200vw;
+    padding-top       : 87px;
+    padding-bottom    : 0px;
+    
+   .title {
+      color: @black; 
+      margin:0;
+      left:0;
+      padding-left: 4.75%;
+      padding-right: 4.75%;
+    }
+  }
+  
+}
+
+/* command  ends*/

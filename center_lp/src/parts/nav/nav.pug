@@ -1,0 +1,19 @@
+nav.nav.scroll
+  a.logo(href="/")
+  a.nav__link.m-hide(href="#projects") Портфолио
+  a.nav__link.m-hide(href) Виды услуг
+  a.nav__link.m-hide(href="#contact") Калькулятор
+  a.nav__link.m-hide(href="#adress") Контакты
+  a.nav__phone(href="tel:+79058248564") +7 (905) 824 85 64 
+  .nav__toggle.m-show(onclick="toggleNav()")
+    .nav__toggle__line
+    .nav__toggle__line
+    .nav__toggle__line
+  .nav__bottom.m-show.m-hide
+    a.nav__link(href="#projects") Портфолио
+    a.nav__link(href) Виды услуг
+    a.nav__link(href) Калькулятор
+    a.nav__link(href="#adress") Контакты
+    .nav__cross.m-show(onclick="toggleNav()") ×
+  script
+      include toggle_nav.js

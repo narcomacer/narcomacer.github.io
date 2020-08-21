@@ -1,0 +1,136 @@
+/* news */
+
+.news {
+  padding-top: 91px;
+  padding-left: calc(13.5% - 1.35vw);
+  padding-right: calc(13.5% - 1.35vw);
+  padding-bottom: 54px;
+  background-color: #f8f8f8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+}
+
+.news__header {
+  display: grid;
+  grid-template-columns: max-content max-content auto max-content;
+  grid-gap: 3.6vw;
+  margin-bottom: 45px;
+  padding-left: 1.35vw;
+  padding-right: 1.35vw;
+}
+
+.news__header__link {
+  border-bottom: 1px dashed currentColor;
+  font-size: calc(var(--small-adaptive) * 1.5);
+  font-style: italic;
+}
+
+.news__header__title {
+  font-size: calc(var(--small-adaptive) * 1.1666);
+  color: var(--light-grey);
+}
+
+.news__header__all {
+  font-size: var(--small-adaptive);
+}
+
+.news__content {
+  width: 100%;
+}
+
+.news__1-slide {
+  height: auto;
+  display: grid;
+  grid-template-rows: 1fr 60px auto auto;
+  padding-left: 1.35vw;
+  padding-right: 1.35vw;
+}
+
+.news__slide {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding-left: 1.35vw;
+  padding-right: 1.35vw;
+  grid-gap: 2.7vw;
+}
+
+.news__img {
+  width: 100%;
+  height: auto;
+}
+
+.news__1-slide__date,
+.news__slide__date {
+  font-size: var(--small-adaptive);
+  text-align: center;
+  padding-top: calc(60px - 1em);
+  color: var(--light-brown);
+}
+
+.news__slide__date {
+  padding-top: 19px;
+  padding-bottom: 9px;
+}
+
+.news__1-slide__title {
+  font-size: calc(var(--small-adaptive) * 2.5);
+  font-weight: 900;
+  margin-bottom: 21px;
+}
+
+.news__slide__title-min {
+  font-weight: 900;
+  font-size: calc( var(--small-adaptive) + 4px);
+}
+
+@media(min-width: 1290px) {
+  .news__1-slide__title {
+      font-size: 32px;
+  }
+}
+
+.news__1-slide__text {
+  font-size: calc(var(--small-adaptive) * 1.333);
+  padding-left: 9%;
+  padding-right: 9%;
+}
+
+.news__slide__item {
+  display: grid;
+  grid-template-rows: auto auto 3em;
+}
+
+#owl-carousel .owl-nav .owl-prev {
+  font-size: 0em;
+  position: absolute;
+  top: calc(50% - 2vw);
+  left: -4vw;
+}
+
+#owl-carousel .owl-nav .owl-next {
+  font-size: 0em;
+  position: absolute;
+  top: calc(50% - 2vw);
+  right: -4vw;
+}
+
+#owl-carousel .owl-nav .owl-prev span,
+#owl-carousel .owl-nav .owl-next span {
+  color: white;
+  display: block;
+  width: 4vw;
+  height: 4vw;
+  background: url(../img/arrow.svg) center/contain;
+  cursor: pointer;
+}
+
+#owl-carousel .owl-nav .owl-prev span {
+  transform: scale(-1);
+}
+
+
+/* news end */

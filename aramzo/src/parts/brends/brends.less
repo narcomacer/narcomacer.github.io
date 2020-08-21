@@ -1,0 +1,90 @@
+/* brends */
+
+.brends {
+  position: relative;
+  padding-left: 13.5%;
+  overflow: hidden;
+  max-width: 99.9vw;
+}
+
+.brends__content {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 15.4vw 4vw auto repeat(3, 2.5em) auto;
+  grid-template-columns: auto 61.7vw;
+}
+
+.h2__header__title {
+  font-size: calc(var(--small-adaptive) * 1.1666);
+  color: var(--light-grey);
+  position: absolute;
+  top: 0;
+  left: 13.5%;
+  z-index: 3;
+}
+
+.brends__link {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.brends__link::after {
+  content: ">";
+  font-size: 14px;
+  color: var(--light-grey);
+  padding-left: .5em;
+}
+
+.brends__text {
+  padding-bottom: 29px;
+  padding-right: 24px;
+  padding-top: 29px;
+  line-height: 1.75;
+  color: var(--grey);
+  font-size: calc( var(--small-adaptive) + 4px);
+}
+
+.brends__img {
+  grid-row: 1/8;
+  grid-column: 2/3;
+  height: auto!important;
+  width: 100%!important;
+}
+
+.brends__logo {
+  width: auto!important;
+  height: 4vw!important;
+}
+
+#carousel-2 .owl-nav .owl-prev {
+  font-size: 0em;
+  position: absolute;
+  top: 19%;
+  left: -1%;
+}
+
+#carousel-2 .owl-nav button.owl-next {
+  font-size: 0em;
+  position: absolute;
+  top: 19%;
+  left: 5%;
+}
+
+#carousel-2 .owl-nav button.owl-prev span,
+#carousel-2 .owl-nav button.owl-next span {
+  color: white;
+  display: block;
+  width: 4vw;
+  height: 4vw;
+  background: url(../img/arrow.svg) center/contain;
+  cursor: pointer;
+}
+
+#carousel-2 .owl-nav .owl-prev span {
+  transform: scale(-1);
+}
+
+
+/* brends end */

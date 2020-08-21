@@ -1,0 +1,73 @@
+/* nav */
+
+
+.nav {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  display: grid;
+  grid-gap: 2.6vw;
+  grid-template-columns: 5vw 22px repeat(3, max-content) auto repeat(3, max-content) 5vw;
+  grid-template-areas: ". a b c d logo e f g ."
+}
+
+
+.nav__link {
+  font-family: 'GothamPro', sans-serif;
+  font-size: var(--small-adaptive);
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.search-icon,
+.fo {
+  font-family: 'fo';
+  display: inline;
+}
+
+.search-icon {
+  font-size: calc(var(--small-adaptive) * 0.833);
+}
+
+.nav__logo {
+  justify-self: center;
+  align-self: center;
+  width: 12vw;
+  height: auto;
+  max-width: 222px;
+  max-height: 52px;
+}
+
+.nav__toggle {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  width: 1.4em;
+  height: 1.2em;
+  align-self: center;
+  cursor: pointer;
+}
+
+.nav__toggle__line {
+  height: 50%;
+  border-bottom: 2px solid white;
+}
+
+.ntl1 {
+  width: 75%;
+}
+
+.nav__toggle:hover>.ntl1 {
+  width: 100%;
+}
+
+.nav__toggle:hover>.ntl2 {
+  width: 75%;
+}
+
+
+/* nav end */

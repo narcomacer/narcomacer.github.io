@@ -1,0 +1,26 @@
+doctype html 
+html(lang="ru") 
+
+meta(charset="UTF-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+meta(http-equiv="X-UA-Compatible", content="ie=edge")
+link(rel="stylesheet", href="static/css/aramzo.css")
+link(rel="stylesheet", href="static/owl-carusel/owl.carousel.min.css")
+link(rel="stylesheet", href="static/owl-carusel/owl.theme.default.min.css")
+
+title Aramzo
+body
+    include parts/header/header.pug
+    
+    include parts/categories/categories.html
+    include parts/news/news.html
+    include parts/brends/brends.html
+    include parts/hits/hits.pug
+    include parts/journal/journal.html
+    include parts/instagram/instagram.html
+    include parts/footer/footer.html
+    
+    script
+        include parts/scripts/aramzo-slider.js
+        include parts/scripts/owl-config.js
+        

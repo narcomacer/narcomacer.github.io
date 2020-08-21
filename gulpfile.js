@@ -16,7 +16,7 @@ const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
 
-const pathName = '.';
+const pathName = 'aramzo';
 let dot = '.';
 
 if (pathName == '.') {

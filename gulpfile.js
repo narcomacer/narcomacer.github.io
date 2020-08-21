@@ -17,6 +17,7 @@ const ftp = require('vinyl-ftp');
 
 
 const pathName = 'aramzo';
+const pathName_b = '.';
 let dot = '.';
 
 if (pathName == '.') {
@@ -42,7 +43,8 @@ const config = {
         path: `${pathName}`,
         path_file: `${pathName}/index.html`,
         path_file_css: `${pathName}/${pathName}.css`,
-        newHtml: `/tmp/fz3temp-2`
+        newHtml: `/tmp/fz3temp-2`,
+        browser_path: `${pathName_b}`
     }
 };
 
@@ -82,7 +84,7 @@ gulp.task('pushCss', function() {
 gulp.task('serve', (done) => {
     browserSync.init({
         server: {
-            baseDir: config.output.path
+            baseDir: config.output.browser_path
         }
     });
     gulp.watch(config.path.less, gulp.series('less'));

@@ -16,7 +16,7 @@ const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
 
-const pathName = 'aramzo';
+const pathName = 'center_lp';
 const pathName_b = '.';
 let dot = '.';
 
@@ -66,7 +66,7 @@ gulp.task('less', function() {
         .pipe(concat(config.output.cssName))
         .pipe(authoprefixer())
         .pipe(cleanCss())
-        // .pipe(sourcemaps.write())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(config.output.path))
         .pipe(browserSync.stream());
 });

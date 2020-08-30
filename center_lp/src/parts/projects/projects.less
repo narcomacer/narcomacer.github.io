@@ -2,15 +2,26 @@
 .projects {
   
   .bg-cover('img/projects-back.svg');
-  .vertical-grid-dif(300px auto auto, 50px);
-  position   : relative;
-  align-items: end;
 
-  @media (max-width: @size-tablete) {
-    display           : block;
-   
-    padding-top       : 87px;
-    padding-bottom    : 0px;
+  
+  
+  
+
+  
+  
+  &__container{
+    .vertical-grid-dif(300px auto auto, 50px);
+    
+    position   : relative;
+    align-items: end;
+    max-width: 1440px;
+    margin:auto;
+    
+    @media (max-width: @size-tablete) {
+      display           : block;
+      padding-top       : 87px;
+      padding-bottom    : 0px;
+    }
   }
 
   &__nav {
@@ -45,29 +56,38 @@
   &__slider {
     .block(9.5%, 0);
     grid-row: ~"2/3";
+    
     @media(min-width: 1440px){
       padding-left:137px ;
       padding-right:137px ;
-      margin: 0;
+      margin: auto;
     }
   }
 
   &__slider-nav {
     grid-row   : ~"2/3";
     grid-column: ~"1/2";
+    max-width: 662px;
+    
+    
   }
 
   &__grid {
-    .grid(46vw 32vw, 478px auto, 30px, 35px) !important;
-    width: 100%;
+    .grid(minmax(46vw, 662px) minmax(32vw,460px), 478px auto, 30px, 35px) !important;
+    // width: 100%;
 
     &--nav {
       grid-template-rows: minmax(478px, auto) 142px;
+      
+      @media( min-width: @viewport-max){
+        .grid( 662px 460px, 478px auto, 30px, 35px) !important;
+      }
     }
   }
 
   &__img {
     width        : 100%;
+    max-width: 662px;
     height       : auto;
    
   }
@@ -102,9 +122,7 @@
     height: 19.444vw;
     margin-top: -15px;
      .bg-contain('img/projects-back2.svg');
-     @media(min-width: @viewport-max){
-      margin-top: -150px;
-     }
+     
    
   }
 

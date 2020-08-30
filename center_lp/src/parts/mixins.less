@@ -230,6 +230,29 @@ a:not([href]):not([tabindex]):focus {
   }
 }
 
+.block-free(@padding-x: 9.5%, @padding-y: 30px ){
+  padding-top: @padding-y;
+  padding-left: @padding-x;
+  padding-right: @padding-x;
+  padding-bottom: @padding-y;
+  
+  margin:auto;
+  
+  @media (max-width: @size-tablete) {
+    padding-top: @padding-y/1.5;
+  padding-left: @padding-x/1.5;
+  padding-right: @padding-x/1.5;
+  padding-bottom: @padding-y/1.5;
+  }
+
+  @media (max-width: @size-mobile) {
+    padding-top: @padding-y/2;
+  padding-left: @padding-x/2;
+  padding-right: @padding-x/2;
+  padding-bottom: @padding-y/2;
+  }
+}
+
 .bg-cover(@url) {
   background: url(@url) no-repeat center/ cover;
 }

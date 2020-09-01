@@ -7,18 +7,23 @@
   grid-template-columns: 13% 36% auto;
   width: 100%;
   height: 56.25vw;
-  background-image: url(../img/header-min.jpg);
+  background-image: url(./static/img/header-min.jpg);
   background-position: top;
   background-size: contain;
   background-repeat: no-repeat;
   /* задаем фоновые изображения, для различных разрешений */
-  background-image: -webkit-image-set(url(../img/header-min.jpg) 1x, url(../img/header.jpg) 2x);
+  background-image: -webkit-image-set(url(./static/img/header-min.jpg) 1x, url(./static/img/header.jpg) 2x);
+  
+  @media (max-width: @size-mobile){
+    background-size: cover;
+    grid-template-rows: auto;
+  }
 }
 
 
 .header__title {
-  grid-column: 2/3;
-  grid-row: 4/5;
+  grid-column: ~"2/3";
+  grid-row: ~"4/5";
 }
 
 .header__title__min {

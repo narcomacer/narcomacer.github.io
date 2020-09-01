@@ -73,15 +73,13 @@
   }
 
   &__grid {
-    .grid(minmax(46vw, 662px) minmax(32vw,460px), 478px auto, 30px, 35px) !important;
+    .grid(minmax(46%, 662px) minmax(30%,460px), 478px auto, 30px, 35px) !important;
     // width: 100%;
 
     &--nav {
-      grid-template-rows: minmax(478px, auto) 142px;
       
-      @media( min-width: @viewport-max){
         .grid( 662px 460px, 478px auto, 30px, 35px) !important;
-      }
+      
     }
   }
 

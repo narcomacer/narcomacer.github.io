@@ -16,8 +16,8 @@ const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
 
-const pathName = 'aramzo';
-const pathName_b = '.';
+const pathName = 'sandbox';
+const pathName_b = 'sandbox';
 let dot = '.';
 
 if (pathName == '.') {

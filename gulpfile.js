@@ -16,8 +16,8 @@ const browserSync = require('browser-sync').create();
 const ftp = require('vinyl-ftp');
 
 
-const pathName = 'sandbox';
-const pathName_b = 'sandbox';
+const pathName = '.';
+const pathName_b = '.';
 let dot = '.';
 
 if (pathName == '.') {

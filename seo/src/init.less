@@ -2,27 +2,30 @@
 @import (reference) "parts/bootstrap";
 @import "parts/mixins";
 
-
+@import "parts/nav/nav";
+@import "parts/header/header";
 
 
 html {
   .clear();
   overflow-x: hidden;
   overflow-y: scroll;
-  position  : absolute;
-  top       : 0;
-  left      : 0;
-  right     : 0;
-  bottom    : 0;
-}
-a {
-  color: currentColor;
-  &:hover{
-    color: darken(@light_orange, 20%);
-  } 
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
-.txt-36 {
+a {
+  color: currentColor;
+
+  &:hover {
+    color: darken(@light_orange, 20%);
+  }
+}
+
+.txt-50 {
   .font-xxl;
 
   @media (max-width: @size-mobile) {
@@ -82,25 +85,27 @@ a {
 
 body {
   font-family: @font-family;
-  color      : @black;
+  color: @black;
 
 
 }
 
 .button {
   display: block;
-  width           : 265px;
-  height          : 50px;
-  border-radius   : 50px;
-  background-color: @orange;
-  color           : @white;
-  text-align      : center;
+  width: 265px;
+  height: 55px;
+  border-radius: 50px;
+  background-color: @aquamareen;
+  color: @white;
+  text-align: center;
   vertical-align: middle;
-  cursor          : pointer;
-  margin: auto;
+  cursor: pointer;
+  
+  text-transform:uppercase;
+  .txt-16;
 
   @media (max-width: @size-mobile) {
-    width : 250px;
+    width: 250px;
     height: 40px;
   }
 }
@@ -108,48 +113,56 @@ body {
 
 
 .button:hover {
-  box-shadow      : 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(255, 102, 0, 0.12), 0px 4px 8px rgba(255, 102, 0, 0.18);
-  background-color: darken(@orange, 1%);
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(255, 102, 0, 0.12), 0px 4px 8px rgba(255, 102, 0, 0.18);
+  background-color: darken(@aquamareen, 1%);
 }
 
-img{
+img {
   border-radius: 5px;
 }
 
 input {
-  width           : 265px;
-  height          : 50px;
-  border-radius   : 50px;
+  width: 265px;
+  height: 50px;
+  border-radius: 50px;
   background-color: white;
-  color           : @black;
-  text-align      : center;
-  cursor          : pointer;
+  color: @black;
+  text-align: center;
+  cursor: pointer;
   outline: none;
   border: none;
-  box-shadow:none;
-  box-shadow      : 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(255, 102, 0, 0.12), 0px 4px 8px rgba(255, 102, 0, 0.18);
-  
- 
+  box-shadow: none;
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(255, 102, 0, 0.12), 0px 4px 8px rgba(255, 102, 0, 0.18);
+
+
   @media (max-width: @size-mobile) {
-    width : 250px;
+    width: 250px;
     height: 40px;
   }
 }
 
-.icon-before(@url){
-  display:inline-block;
-  content:" ";
-  width:1em;
-  height:1em;
+.icon-before(@url) {
+  display: inline-block;
+  content: " ";
+  width: 1em;
+  height: 1em;
   margin-right: 0.5em;
-  .bg-contain(@url); 
-  position:relative;
-  top:0.2em;
+  .bg-contain(@url);
+  position: relative;
+  top: 0.2em;
 }
 
-.clock:before{.icon-before('img/clock.svg')}
-.tel:before{.icon-before('img/phone.svg')}
-.location:before{.icon-before('img/location.svg')}
+.clock:before {
+  .icon-before('img/clock.svg')
+}
+
+.tel:before {
+  .icon-before('img/phone.svg')
+}
+
+.location:before {
+  .icon-before('img/location.svg')
+}
 
 .title {
   .txt-32;
@@ -164,26 +177,27 @@ input {
 
 ul {
   list-style-type: none;
-  padding        : 0;
-  margin-left    : 2%;
+  padding: 0;
+  margin-left: 2%;
 }
 
 
 
 .logo {
   .bg-contain('img/logo.png');
-  align-self  : stretch;
+  align-self: stretch;
   justify-self: stretch;
-  
+
 }
 
 @import "parts/nav/nav";
 
 
-#contact3{
+#contact3 {
   display: none;
   margin-bottom: 50px;
-  &:target{
+
+  &:target {
     display: block;
   }
 }
@@ -192,19 +206,19 @@ ul {
 
 .m-show {
   @media (min-width: @size-mobile + 1) {
-    display: none!important;
+    display: none !important;
   }
 }
 
 .m-hide {
   @media (max-width: @size-mobile) {
-    display: none!important;
+    display: none !important;
   }
 }
 
 .t-hide {
   @media (max-width: @size-tablete) {
-    display: none!important;
+    display: none !important;
   }
 }
 
@@ -212,7 +226,7 @@ ul {
   grid-column: span 3;
 }
 
-.button-centred{
+.button-centred {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -233,5 +247,5 @@ ul {
 
 // .hex:hover{ border: -6px solid red;
 //   filter: saturate(110%) brightness(110%);
- 
+
 // }

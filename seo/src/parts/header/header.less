@@ -1,0 +1,35 @@
+.header {
+    padding-top: 260px;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family: Raleway, sans-serif;
+    align-items: center;
+    justify-items: start;
+
+    &__txt {
+        
+        display: grid;
+        grid-template-rows: auto;
+        row-gap: 30px;
+        justify-items: start;
+        align-items: start;
+        
+        &__title {
+            .txt-50;
+        }
+
+        &__text{
+            width:468px;
+            .txt-20;
+            font-family: Roboto;
+        }
+    }
+
+    &__img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url('img/header/bloob-bottom.svg') 100% 100%/ cover;
+    }
+}

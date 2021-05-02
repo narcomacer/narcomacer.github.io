@@ -1,6 +1,26 @@
 @import "parts/3L/3L";
 @import "parts/params";
 @import "parts/mixins";
+@import "parts/adaptive-fonts.less";
 @import "parts/header/header";
 @import "parts/example/example";
 @import "parts/footer/footer";
+
+
+
+
+.return{
+  background-color: red;
+  
+  .f-size(10px, 34px);
+  font-size: var(--return);
+  padding-left: var(--return);
+}
+
+.return::after{
+  display: block;
+  width: 100px;
+  height: 100px;
+  content: var(--return);
+}
+

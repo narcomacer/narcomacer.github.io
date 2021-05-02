@@ -628,22 +628,23 @@ a:not([href]):not([tabindex]):focus {
 }
 
 
-.r-size(@viewport_min, @viewport_min_num,@viewport_max_num,@value_min, @value_min_num, @value_max_num){
-  --Vmax_num: @viewport_max_num;
+.r-size(@value_min, @value_max, @viewport_min: @viewport-min, @viewport_max: @viewport-max){
+  --Vmax_num: unit(@viewport_max);
   --Vmin: @viewport_min;
-  --Vmin_num: @viewport_min_num;  
-  --Fmax_num: @value_max_num;
+  --Vmin_num: unit(@viewport_min);  
+  --Fmax_num: unit(@value_max);
   --Fmin: @value_min;
-  --Fmin_num: @value_min_num;
+  --Fmin_num: unit(@value_min);
 --return:   calc( (100vw - var(--Vmin))/(var(--Vmax_num) - var(--Vmin_num)) * (var(--Fmax_num) - var(--Fmin_num)) + var(--Fmin));
 }
 
-.r-size2(@viewport_min, @viewport_min_num,@viewport_max_num,@value_min, @value_min_num, @value_max_num){
-  --Vmax_num2: @viewport_max_num;
+.r-size2(@value_min, @value_max, @viewport_min: @viewport-min, @viewport_max: @viewport-max){
+  --Vmax_num2: unit(@viewport_max);
   --Vmin2: @viewport_min;
-  --Vmin_num2: @viewport_min_num;  
-  --Fmax_num2: @value_max_num;
+  --Vmin_num2: unit(@viewport_min);  
+  --Fmax_num2: unit(@value_max);
   --Fmin2: @value_min;
-  --Fmin_num2: @value_min_num;
---return2:   calc( (100vw - var(--Vmin2))/(var(--Vmax_num2) - var(--Vmin_num2)) * (var(--Fmax_num2) - var(--Fmin_num2)) + var(--Fmin2));
+  --Fmin_num2: unit(@value_min);
+--return2:   calc( (100vw - var(--Vmin))/(var(--Vmax_num) - var(--Vmin_num)) * (var(--Fmax_num) - var(--Fmin_num)) + var(--Fmin));
 }
+

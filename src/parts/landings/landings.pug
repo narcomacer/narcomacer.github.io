@@ -2,6 +2,22 @@ section.landings#landings
   h2.title Примеры вёрстки
   .landings__slider#slider1
     .landings__card
+      a(target="_blank", href="/zr-podpiska/")
+        img.landings__card__img(src="img/brainstorming.svg")
+      a.landings__card__title(target="_blank", href="/zr-podpiska/").
+        За рулём
+        
+      .landings__card__text
+        p
+          | Сайт.
+          br
+          | Для лучшей адаптивности были использованы css-переменные. Сетка сделана с помощью CSS Grid.
+          br
+          | Препроцессор - less. Исходный код CSS разбит на модули, которые собираются с помощью Gulp.
+
+        .white-gradient
+      .landings__card__arrow-down(onclick="openText(this)")
+    .landings__card
       a(target="_blank", href="/center_lp/")
         img.landings__card__img(src="img/brainstorming.svg")
       a.landings__card__title(target="_blank", href="/center_lp/").
